@@ -1,5 +1,6 @@
 import pygame
 import random
+import os
 
 pygame.init()
 
@@ -8,13 +9,18 @@ screen_height = 640
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 # Title
-pygame.display.set_caption("똥피하기 게임")
+pygame.display.set_caption("폭탄피하기 게임")
 
 clock = pygame.time.Clock()
 
-background = pygame.image.load("./first-python-project/background.png")
+current_path = os.path.dirname(__file__) # 현재 파일 위치 반환
 
-character = pygame.image.load("./first-python-project/character.png")
+# 배경 만들기
+background = pygame.image.load(os.path.join(current_path, "background.png"))
+
+
+
+character = pygame.image.load(os.path.join(current_path, "character.png"))
 character_size = character.get_rect().size
 character_width = character_size[0]
 character_height = character_size[1]
@@ -25,9 +31,9 @@ to_x = 0
 to_y = 0
 
 character_speed = 0.3
-enemy_speed = 0.4
+enemy_speed = 0.6
 
-enemy = pygame.image.load("./first-python-project/bomb.png")
+enemy = pygame.image.load(os.path.join(current_path, "bomb.png"))
 enemy_size = enemy.get_rect().size
 enemy_width = enemy_size[0]
 enemy_height = enemy_size[1]
