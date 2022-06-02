@@ -18,10 +18,12 @@ clock = pygame.time.Clock()
 # 1. 사용자 게임 초기화 (배경화면, 게임 이미지, 좌표, 속도, 폰트 등)
 
 # Load background
-background = pygame.image.load("C:\\Users\\gatob\\Desktop\\새 폴더\\code\\pygame\\background.png")
+background = pygame.image.load(
+    "/Users/hobin/first-python-project/background.png")
 
 # Load character
-character = pygame.image.load("C:\\Users\\gatob\\Desktop\\새 폴더\\code\\pygame\\character.png")
+character = pygame.image.load(
+    "/Users/hobin/first-python-project/character.png")
 character_size = character.get_rect().size
 character_width = character_size[0]
 character_height = character_size[1]
@@ -36,7 +38,7 @@ to_y = 0
 character_speed = 0.3
 
 # Load Enemy
-enemy = pygame.image.load("C:\\Users\\gatob\\Desktop\\새 폴더\\code\\pygame\\enemy.png")
+enemy = pygame.image.load("/Users/hobin/first-python-project/enemy.png")
 enemy_size = enemy.get_rect().size
 enemy_width = enemy_size[0]
 enemy_height = enemy_size[1]
