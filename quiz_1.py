@@ -12,7 +12,7 @@ pygame.display.set_caption("똥피하기 게임")
 
 clock = pygame.time.Clock()
 
-background = pygame.image.load("/Users/hobin/first-python-project/background.png")
+background = pygame.image.load("./first-python-project/background.png")
 
 character = pygame.image.load("/Users/hobin/first-python-project/character.png")
 character_size = character.get_rect().size
