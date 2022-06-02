@@ -14,7 +14,7 @@ clock = pygame.time.Clock()
 
 background = pygame.image.load("./first-python-project/background.png")
 
-character = pygame.image.load("/Users/hobin/first-python-project/character.png")
+character = pygame.image.load("./first-python-project/character.png")
 character_size = character.get_rect().size
 character_width = character_size[0]
 character_height = character_size[1]
@@ -27,7 +27,7 @@ to_y = 0
 character_speed = 0.3
 enemy_speed = 0.4
 
-enemy = pygame.image.load("/Users/hobin/first-python-project/bomb.png")
+enemy = pygame.image.load("./first-python-project/bomb.png")
 enemy_size = enemy.get_rect().size
 enemy_width = enemy_size[0]
 enemy_height = enemy_size[1]
