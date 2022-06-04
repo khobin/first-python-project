@@ -19,7 +19,6 @@ current_path = os.path.dirname(__file__) # 현재 파일 위치 반환
 background = pygame.image.load(os.path.join(current_path, "background.png"))
 
 
-
 character = pygame.image.load(os.path.join(current_path, "character.png"))
 character_size = character.get_rect().size
 character_width = character_size[0]
@@ -85,6 +84,7 @@ while running:
 
     if character_rect.colliderect(enemy_rect):
         print("충돌")
+        enemy = pygame.image.load(os.path.join(current_path, "boom.png"))
         print(f"피한 횟수 :", count)
         running = False
 
@@ -98,16 +98,12 @@ while running:
     screen.blit(enemy, (enemy_x_pos, enemy_y_pos))
     counter = game_font.render(str(count), True, (0,0,0))
     screen.blit(counter, (10,10))
-    # elapsed_time = (pygame.time.get_ticks() - start_ticks) / 1000
-    # timer = game_font.render(str(int(total_time - elapsed_time)),True, (0,0,0))
-    # screen.blit(timer, (10,10))
 
-    # if total_time - elapsed_time <= 0:
-    #     print("Time out")
-    #     running = False
     
     pygame.display.update()
-
-print("종료 2초전")
+count_msg = game_font.render(str(count), True, (0,0,0))
+count_msg_rect = count_msg.get_rect(center = (int(screen_width / 2), int(screen_height / 2)))
+screen.blit(count_msg, count_msg_rect)
+pygame.display.update()
 pygame.time.delay(2000)
 pygame.quit
